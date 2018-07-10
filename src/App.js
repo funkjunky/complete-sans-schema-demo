@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import NewPost from './Posts/New';
+import Post from './Posts';
 import './App.css';
 
 class App extends Component {
@@ -10,9 +12,15 @@ class App extends Component {
           <h1 className="App-title">Françanglais-book</h1>
           <h2 className="App-subtitle">Social Messaging for the modern Quebecois</h2>
         </header>
+        <NewPost />
+        <section id="posts">
+            { this.props.posts.map(post => (
+                <Post {...{ post } } />
+            )) }
+        </section>
       </div>
     );
   }
 }
 
-export default App;
+export default connect(({ posts }) => ({ posts: Object.values(posts) })(App);
