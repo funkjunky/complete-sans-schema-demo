@@ -7,9 +7,10 @@ export default [
             linkedin: 'https://www.linkedin.com/in/jasonmccarrell/',
             twitter: 'https://twitter.com/jayeh_ca',
         },
-        posts: [{
-            1: { id: 1, title: 'Leenoctopus is back!' },
-        }]
+        posts: [
+            { id: 1, title: 'Leenoctopus is back!' },
+        ],
+        likes: [],
     },
     {
         id: 2,
@@ -18,9 +19,10 @@ export default [
         social: {
             twitter: 'https://twitter.com/onfireNoRegreT',
         },
-        posts: [{
-            2: { id: 2, title: 'Reynor, the next royal roader?' },
-        }]
+        posts: [
+            { id: 2, title: 'Reynor, the next royal roader?' },
+        ],
+        likes: [],
     },
     {
         id: 3,
@@ -29,5 +31,7 @@ export default [
         social: {
             twitter: 'https://twitter.com/onfirescarlett',
         },
+        posts: [],
+        likes: [],
     },
 ];

@@ -5984,9 +5984,9 @@ sane@~1.6.0:
     walker "~1.0.5"
     watch "~0.10.0"
 
-sans-schema@^0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/sans-schema/-/sans-schema-0.9.5.tgz#9d5377810186d99f7189875ed3871c542ac874a4"
+sans-schema@^0.9.10:
+  version "0.9.10"
+  resolved "https://registry.yarnpkg.com/sans-schema/-/sans-schema-0.9.10.tgz#18e3550708dd04334c0f2f13edacd3c035d5b9d2"
 
 sax@^1.2.1, sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"

@@ -7,7 +7,7 @@ export default [
         title: 'Leenoctopus is back!',
         message: 'Leenock did incredible in the RO 32, can he take Rogue\'s title as the best zerg?',
         comments: [],
-        likes: [],
+        likedBy: [],
     },
     {
         id: 2,
@@ -17,6 +17,6 @@ export default [
         title: 'Reynor, the next royal roader?',
         message: 'After such a performance in the ro32, maybe?',
         comments: [],
-        likes: [],
+        likedBy: [],
     }
 ];

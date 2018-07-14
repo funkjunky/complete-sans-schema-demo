@@ -7,10 +7,10 @@ import reduxThunk from 'redux-thunk';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { loadNormalized } from './reducer';
 import rootReducer from './reducer';
 
 const store = createStore(rootReducer, applyMiddleware(reduxThunk));
+window.store = store;
 
 ReactDOM.render(
     <Provider store={ store }>

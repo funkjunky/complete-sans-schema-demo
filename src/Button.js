@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default (selected, onClick, children) => (
-    <button {...{ className: selected ? 'off' : 'on', onClick } }>
+export default ({ selected, children, ...props }) => (
+    <a {...{ className: selected ? 'on' : 'off', ...props } }>
         { children }
-    </button>
+    </a>
 );

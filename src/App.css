@@ -1,3 +1,16 @@
+a {
+    cursor: pointer;
+    border: solid 1px black;
+}
+
+.on {
+    background-color: blue;
+}
+
+.off {
+    background-color: white;
+}
+
 .App {
   text-align: center;
 }
