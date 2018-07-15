@@ -5,6 +5,5 @@ import { loadNormalized } from '../reducer';
 export const loadUsers = () => dispatch =>
     setTimeout(() => {
         const normalizedData = flatten('users')(sampleUsers);
-        console.log('normalized: ', normalizedData);
         dispatch(loadNormalized(normalizedData))
     }, 500);

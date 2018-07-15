@@ -1,4 +1,4 @@
-import { LOAD_NORMALIZED, twoLevelMerge } from '../reducer';
+import { LOAD_NORMALIZED, threeLevelMerge } from '../reducer';
 
 const initialState = { };
 
@@ -6,7 +6,7 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
         case LOAD_NORMALIZED:
             if (action.posts) {
-                return twoLevelMerge(state, action.posts);
+                return threeLevelMerge(state, action.posts);
             } else return state;
 
         case 'REMOVE_POST':

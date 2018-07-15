@@ -10,8 +10,7 @@ export const loadNormalized = data => ({
     ...data,
 });
 
-//TODO: renamed to threeLevelMerge
-export const twoLevelMerge = (obj, obj2) => {
+export const threeLevelMerge = (obj, obj2) => {
     const newObj = { ...obj };
     for(const k in obj2) {
         newObj[k] = { ...(obj[k] || {}), ...obj2[k] };
@@ -40,4 +39,5 @@ export default combineReducers({
     users,
     posts,
     likes,
+    currentUser: (state = null, action) => action.type === 'CHOOSE_USER' ? action.user : state,
 });

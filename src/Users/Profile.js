@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { expandModel } from '../configured-sans-schema';
 
-const mapStateToProps  = (state, { user }) => ({
-    user: expandModel('users', user, state),
+const mapStateToProps  = state => ({
+    user: expandModel('users', state.currentUser, state),
 });
 
 export default connect(mapStateToProps)(({ user }) => (

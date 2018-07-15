@@ -33,4 +33,32 @@ export const removePost = post => (dispatch, getState) =>
         });
     }, 200);
 
+export const likePost = (user, post) => dispatch =>
+    // pretending to POST /posts/
+    setTimeout(() => {
+        const normalizedData = flatten('posts')({
+            id: post.id,
+            likedBy: [
+                ...post.likedBy,
+                { id: user.id }
+            ],
+        });
+        dispatch(loadNormalized(normalizedData))
+    }, 0);
 
+export const unlikePost = (user, post) => dispatch =>
+    // pretending to POST /posts/
+    setTimeout(() => {
+        // Note: we need both the post and the user in the flattened data, to get the relational data we need.
+        // Otherwise we'll only remove on one side of the many to many relationship.
+        const normalizedData = flatten('posts')({
+            id: post.id,
+            likedBy: post.likedBy.filter(u => u.id !== user.id),
+            user: {
+                id: user.id,
+                likes: user.likes.filter(p => p.id !== post.id),
+            },
+        });
+
+        dispatch(loadNormalized(normalizedData))
+    }, 0);
